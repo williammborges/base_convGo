@@ -1,3 +1,3 @@
-module github.com/williammborges/base_convGo
+module base_convGo
 
 go 1.20
