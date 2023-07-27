@@ -37,15 +37,12 @@ func octal_binary(number string) string {
 	for _, v := range chunks {
 		x, _ := strconv.Atoi(v)
 
-		// Primeiro algarismo
 		thirdDigit := x % 2
 		x /= 2
 
-		// Segundo algarismo
 		secondDigit := x % 2
 		x /= 2
 
-		// Terceiro algarismo
 		firstDigit := x
 
 		numConverted = numConverted + (strconv.Itoa(firstDigit) + strconv.Itoa(secondDigit) + strconv.Itoa(thirdDigit))

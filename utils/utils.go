@@ -1,5 +1,7 @@
 package utils
 
+import "strconv"
+
 func DivideString(str string, chunkSize int) []string {
 	var chunks []string
 	for i := 0; i < len(str); i += chunkSize {
@@ -36,6 +38,6 @@ func ChangeNumberToDecimal(number int) string {
 	case 15:
 		return "F"
 	default:
-		return ""
+		return strconv.Itoa(number)
 	}
 }
