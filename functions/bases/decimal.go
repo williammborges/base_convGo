@@ -1,9 +1,10 @@
 package bases
 
 import (
-	"base_convGo/utils"
 	"fmt"
 	"strconv"
+
+	utils "github.com/williammborges/base_convGo/utils"
 )
 
 func ConvertDecimal(newBase Base, number string) {

@@ -1,10 +1,11 @@
 package bases
 
 import (
-	"base_convGo/utils"
 	"fmt"
 	"math"
 	"strconv"
+
+	utils "github.com/williammborges/base_convGo/utils"
 )
 
 const baseNumBinary = 2

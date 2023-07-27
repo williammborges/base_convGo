@@ -1,9 +1,10 @@
 package functions
 
 import (
-	baseConv "base_convGo/functions/bases"
 	"fmt"
 	"strconv"
+
+	baseConv "github.com/williammborges/base_convGo/functions/bases"
 )
 
 func Logo() {
