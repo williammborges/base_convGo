@@ -23,7 +23,7 @@ func VerifyMultiple(number string, multBy int) string {
 	return numberMultBy
 }
 
-func ChangeNumberToDecimal(number int) string {
+func ChangeNumberToHexadecimal(number int) string {
 	switch number {
 	case 10:
 		return "A"
@@ -39,5 +39,25 @@ func ChangeNumberToDecimal(number int) string {
 		return "F"
 	default:
 		return strconv.Itoa(number)
+	}
+}
+
+func ChangeNumberHexaToDecimal(number string) int {
+	switch number {
+	case "A":
+		return 10
+	case "B":
+		return 11
+	case "C":
+		return 12
+	case "D":
+		return 13
+	case "E":
+		return 14
+	case "F":
+		return 15
+	default:
+		num, _ := strconv.Atoi(number)
+		return num
 	}
 }

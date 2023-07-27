@@ -80,7 +80,7 @@ func binary_to_hexadecimal(number string) string {
 		}
 
 		if numConverted > 9 {
-			result += utils.ChangeNumberToDecimal(numConverted)
+			result += utils.ChangeNumberToHexadecimal(numConverted)
 		} else {
 			result += strconv.Itoa(numConverted)
 		}

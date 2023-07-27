@@ -71,8 +71,8 @@ func decimal_to_hexadecimal(number string) string {
 	for num > 0 {
 		rest := num % baseNumHexa
 		quotient := num / baseNumHexa
-		utils.ChangeNumberToDecimal(rest)
-		result = utils.ChangeNumberToDecimal(rest) + result
+		utils.ChangeNumberToHexadecimal(rest)
+		result = utils.ChangeNumberToHexadecimal(rest) + result
 		num = quotient
 	}
 

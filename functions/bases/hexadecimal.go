@@ -1,7 +1,10 @@
 package bases
 
 import (
+	"base_convGo/utils"
 	"fmt"
+	"math"
+	"strconv"
 )
 
 const baseNumHexa = 16
@@ -25,13 +28,51 @@ func ConvertHexadecimal(newBase Base, number string) {
 }
 
 func hexadecimal_to_binary(number string) string {
-	panic("unimplemented")
+	var result string
+	chunkSize := 1
+
+	chunks := utils.DivideString(number, chunkSize)
+
+	var numConverted string
+	for _, v := range chunks {
+		num := utils.ChangeNumberHexaToDecimal(v)
+
+		fourthDigit := num % 2
+		num /= 2
+
+		thirdDigit := num % 2
+		num /= 2
+
+		secondDigit := num % 2
+		num /= 2
+
+		firstDigit := num
+
+		numConverted = numConverted + (strconv.Itoa(firstDigit) + strconv.Itoa(secondDigit) + strconv.Itoa(thirdDigit) + strconv.Itoa(fourthDigit))
+	}
+	result += numConverted
+
+	return result
 }
 
 func hexadecimal_to_octal(number string) string {
-	panic("unimplemented")
+	num := hexadecimal_to_binary(number)
+	result := binary_to_octal(num)
+	return result
 }
 
 func hexadecimal_to_decimal(number string) string {
-	panic("unimplemented")
+	var result string
+	chunkSize := 1
+
+	chunks := utils.DivideString(number, chunkSize)
+
+	var numConverted int
+	for i, v := range chunks {
+		x := utils.ChangeNumberHexaToDecimal(v)
+		numConverted = numConverted + (x * int(math.Pow(baseNumHexa, float64((len(number)-1)-i))))
+	}
+	result += strconv.Itoa(numConverted)
+
+	return result
 }
