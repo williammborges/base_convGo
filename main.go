@@ -1,7 +1,7 @@
 package main
 
 import (
-	functions "base_convGo/functions"
+	functions "github.com/williammborges/base_convGo/functions"
 )
 
 func main() {
